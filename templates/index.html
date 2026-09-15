@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{{ config.title }} — Software Engineer{% endblock title %}
+
+{% block content %}
+<section id="intro" class="section">
+    <h1><span class="prompt">$</span> whoami <span class="cursor-blink"></span></h1>
+    <div class="intro-content">
+        <p>
+            I'm <strong>rwxroot</strong>. I write code and break things.
+        </p>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <h1><span class="prompt">$</span> ls projects/ <span class="cursor-blink"></span></h1>
+    <article class="project-card">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+</section>
+
+<section id="social" class="section">
+    <h1><span class="prompt">$</span> cat social_links.txt <span class="cursor-blink"></span></h1>
+    <div class="social-links">
+        <a href="https://github.com/rwxroot" class="social-link" target="_blank" rel="noopener noreferrer">
+            GitHub
+        </a>
+        <span class="social-link">
+            Libera IRC #rwxroot
+        </span>
+        <a href="mailto:rwxroot@proton.me" class="social-link">
+            Email
+        </a>
+    </div>
+</section>
+{% endblock content %}

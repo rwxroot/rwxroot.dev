@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="description" content="{{ config.extra.description }}">
+    <link rel="stylesheet" href="{{ get_url(path="css/style.css") | safe }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#intro" class="nav-link">intro</a>
+            <a href="#projects" class="nav-link">projects</a>
+            <a href="#social" class="nav-link">social</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; {{ now() | date(format="%Y") }} {{ config.extra.author }}</p>
+        </div>
+    </footer>
+</body>
+</html>
