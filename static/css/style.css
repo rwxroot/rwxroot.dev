@@ -118,6 +118,20 @@ main {
 .project-card p {
     color: var(--fg-dim);
     font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--cyan);
+    text-decoration: none;
+    font-size: 0.88rem;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+}
+
+.project-link:hover {
+    color: var(--blue-b);
 }
 
 .social-links {
