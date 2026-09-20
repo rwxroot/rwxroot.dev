@@ -42,23 +42,20 @@ header {
     padding: 0.75rem 0;
 }
 
-nav {
+.site-title {
+    display: block;
     max-width: 680px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-link {
-    color: var(--fg-dim);
+    color: var(--fg);
     text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     transition: color 0.2s;
 }
 
-.nav-link:hover {
+.site-title:hover {
     color: var(--blue-b);
 }
 
@@ -191,8 +188,8 @@ footer {
 }
 
 @media (max-width: 600px) {
-    nav {
-        gap: 1.25rem;
+    .site-title {
+        font-size: 1.2rem;
     }
 
     main {
