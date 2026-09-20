@@ -9,7 +9,7 @@
     --blue-b:    #4AA3E8;
     --magenta-b: #957BBE;
     --cursor:    #a6a28c;
-    --font:      'IBM Plex Mono', 'Fira Code', 'SF Mono', Menlo, monospace;
+    --font:      'SF Mono', Menlo, 'Fira Code', Consolas, monospace;
 }
 
 /* Reset */
