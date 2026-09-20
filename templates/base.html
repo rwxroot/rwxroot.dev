@@ -11,8 +11,18 @@
     <link rel="icon" type="image/x-icon" href="{{ get_url(path="favicon/favicon.ico") | safe }}">
 </head>
 <body>
+    {% if current_path == "/" %}
+    <div class="boot-overlay">
+        <div class="boot-line line-1">[ OK ] rwxroot.dev kernel loaded</div>
+        <div class="boot-line line-2">[ OK ] Initializing modules...</div>
+        <div class="boot-line line-3">[ OK ] Mounting filesystem...</div>
+        <div class="boot-line line-4">[ OK ] Connecting to the void...</div>
+        <div class="boot-line line-5">[ OK ] All systems nominal</div>
+    </div>
+    {% endif %}
+
     <header>
-        <a href="#" class="site-title">rwxroot.dev</a>
+        <a href="#" class="site-title" id="site-title">rwxroot.dev</a>
     </header>
 
     <main>
@@ -22,6 +32,10 @@
     <footer>
         <div class="footer-inner">
             <p>&copy; {{ now() | date(format="%Y") }} {{ config.extra.author }}</p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--fg-dim);">
+                $ fortune<br>
+                "There are only two hard things in Computer Science: cache invalidation and naming things." — Phil Karlton
+            </p>
         </div>
     </footer>
 </body>

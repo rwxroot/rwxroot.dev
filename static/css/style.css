@@ -33,6 +33,46 @@ body {
     flex-direction: column;
 }
 
+.boot-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: boot-fade-out 0.8s ease 3s forwards;
+}
+
+.boot-line {
+    color: var(--green);
+    font-family: var(--font);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0;
+    animation: boot-line-in 0.3s ease forwards;
+}
+
+.line-1 { animation-delay: 0.3s; }
+.line-2 { animation-delay: 0.7s; }
+.line-3 { animation-delay: 1.1s; }
+.line-4 { animation-delay: 1.5s; }
+.line-5 { animation-delay: 1.9s; }
+
+@keyframes boot-line-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes boot-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+
 header {
     position: sticky;
     top: 0;
@@ -56,7 +96,18 @@ header {
 }
 
 .site-title:hover {
-    color: var(--blue-b);
+    color: var(--green-b);
+}
+
+.site-title::after {
+    content: " ~";
+    color: var(--green-b);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.site-title:hover::after {
+    opacity: 1;
 }
 
 main {
