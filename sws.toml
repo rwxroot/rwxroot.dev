@@ -1,0 +1,18 @@
+[general]
+host = "0.0.0.0"
+port = 1111
+root = "/home/rwxroot/services/rwxroot.dev/public"
+
+log-level = "info"
+log-with-ansi = true
+log-x-real-ip = true
+
+compression = true
+
+security-headers = true
+cache-control-headers = true
+
+directory-listing = false
+ignore-hidden-files = true
+
+maintenance-mode = false
